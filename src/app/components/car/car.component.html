@@ -14,7 +14,7 @@
             <th>Car Name</th>
         </tr>
     </thead>
-    <tr *ngFor="let car of cars" routerLink ="/cars/car-details/{{car.id}}">
+    <tr *ngFor="let car of cars">
         <td>{{car.id}}</td>
         <td>{{car.brandName}}</td>
         <td>{{car.colorName}}</td>
@@ -22,5 +22,6 @@
         <td>{{car.dailyPrice}}</td>
         <td>{{car.description}}</td>
         <td>{{car.carName}}</td>
+        <button routerLink ="/cars/car-details/{{car.id}}" type="button" class="btn btn-primary">Car Details</button>
     </tr>
 </table>
